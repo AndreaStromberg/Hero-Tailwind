@@ -6,12 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hero - Tailwind</title>
 
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Petrona:ital,wght@0,100..900;1,100..900&family=Roboto+Flex:opsz,wght,XOPQ,XTRA,YOPQ,YTDE,YTFI,YTLC,YTUC@8..144,100..1000,96,468,79,-203,738,514,712&display=swap"
+        rel="stylesheet">
+
     <!-- Styles -->
     <link rel="stylesheet" href="src/output.css">
 </head>
 
-<body>
-    <header class="flex gap-18 pl-30 pr-30 h-33 items-center">
+<body class="bg-gradient">
+    <header class="flex gap-18 pl-30 pr-30 h-33 items-center text-dark">
 
         <!-- Logo -->
         <figure>
@@ -126,6 +133,33 @@
 
 
     <!-- hero -->
+    <section class="grid grid-cols-2 pl-30 pr-30 min-h-dvh gap-16">
+
+        <!-- Textinnehåll, vänster -->
+        <div class="flex flex-col items-start">
+            <h1 class="text-dark font-serif text-big/supertight uppercase mt-33">Summer is back</h1>
+
+            <span>MIX & MATCH 3 for 2 on all items</span>
+
+            <span>On the new summer collection</span>
+
+            <a href="">Shop now</a>
+
+
+        </div>
+
+
+
+        <!-- Bildinnehåll, höger -->
+
+        <div>
+            <figure>
+                <img src="assets/images/circle-text.svg" alt="">
+            </figure>
+        </div>
+
+
+    </section>
 
 </body>
 

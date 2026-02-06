@@ -3,13 +3,17 @@
 @layer theme, base, components, utilities;
 @layer theme {
   :root, :host {
-    --font-sans: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
-      "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --font-sans: "Roboto flex", sans-serif;
+    --font-serif: "Petrona", serif;
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
     --spacing: 0.25rem;
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
+    --color-gradient: linear-gradient(225deg, #fff6da 24.96%, #ffd8c4 99.61%);
+    --color-dark: #222;
+    --text-big: 120px;
+    --leading-supertight: 0.9;
   }
 }
 @layer base {
@@ -161,11 +165,17 @@
   }
 }
 @layer utilities {
+  .mt-33 {
+    margin-top: calc(var(--spacing) * 33);
+  }
   .ml-auto {
     margin-left: auto;
   }
   .flex {
     display: flex;
+  }
+  .grid {
+    display: grid;
   }
   .table {
     display: table;
@@ -173,23 +183,35 @@
   .h-33 {
     height: calc(var(--spacing) * 33);
   }
+  .min-h-dvh {
+    min-height: 100dvh;
+  }
   .border-collapse {
     border-collapse: collapse;
   }
   .resize {
     resize: both;
   }
+  .grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .flex-col {
+    flex-direction: column;
+  }
   .items-center {
     align-items: center;
   }
-  .gap-4 {
-    gap: calc(var(--spacing) * 4);
+  .items-start {
+    align-items: flex-start;
   }
   .gap-8 {
     gap: calc(var(--spacing) * 8);
   }
   .gap-10 {
     gap: calc(var(--spacing) * 10);
+  }
+  .gap-16 {
+    gap: calc(var(--spacing) * 16);
   }
   .gap-18 {
     gap: calc(var(--spacing) * 18);
@@ -198,11 +220,30 @@
     border-style: var(--tw-border-style);
     border-width: 1px;
   }
+  .bg-gradient {
+    background-color: var(--color-gradient);
+  }
   .pr-30 {
     padding-right: calc(var(--spacing) * 30);
   }
   .pl-30 {
     padding-left: calc(var(--spacing) * 30);
+  }
+  .font-serif {
+    font-family: var(--font-serif);
+  }
+  .text-big\/supertight {
+    font-size: var(--text-big);
+    line-height: var(--leading-supertight);
+  }
+  .text-big {
+    font-size: var(--text-big);
+  }
+  .text-dark {
+    color: var(--color-dark);
+  }
+  .uppercase {
+    text-transform: uppercase;
   }
   .underline {
     text-decoration-line: underline;
@@ -210,6 +251,11 @@
   .outline {
     outline-style: var(--tw-outline-style);
     outline-width: 1px;
+  }
+}
+@layer utilities {
+  .bg-gradient {
+    background: var(--color-gradient);
   }
 }
 @property --tw-border-style {

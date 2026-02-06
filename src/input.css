@@ -1,1 +1,20 @@
 @import "tailwindcss";
+
+@theme {
+  --color-gradient: linear-gradient(225deg, #fff6da 24.96%, #ffd8c4 99.61%);
+  --color-dark: #222;
+
+  --text-big: 120px;
+  --leading-supertight: 0.9;
+}
+
+@layer utilities {
+  .bg-gradient {
+    background: var(--color-gradient);
+  }
+}
+
+@theme {
+  --font-sans: "Roboto flex", sans-serif;
+  --font-serif: "Petrona", serif;
+}
