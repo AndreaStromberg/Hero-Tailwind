@@ -6,15 +6,15 @@
 
   --text-big: 120px;
   --leading-supertight: 0.9;
+
+  --animate-spin: spin 32s infinite forwards linear;
+
+  --font-sans: "Roboto flex", sans-serif;
+  --font-serif: "Petrona", serif;
 }
 
 @layer utilities {
   .bg-gradient {
     background: var(--color-gradient);
   }
-}
-
-@theme {
-  --font-sans: "Roboto flex", sans-serif;
-  --font-serif: "Petrona", serif;
 }
